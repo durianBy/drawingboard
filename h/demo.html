@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>画布demo</title>
+
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+    <!-- 图片批注 -->
+    <div class="video-comment-wrap" id="videoCommentWrap">
+        <div class="video-comment-container" id="videoCommentContainer">
+            <div class="video-comment-img" id="videoCommentImg"></div>
+            <div class="video-comment-delete" id="picDeleteIcon"><i class="glyphicon glyphicon-trash"></i></div>
+            <div class="video-comment-complete"><i class="glyphicon glyphicon-ok" id="picCompleteIcon"></i><span class="video-comment-complete-tip"></span></div>
+            <!-- <div class="video-comment-close"><i class="glyphicon glyphicon-remove" id="commontCloseIcon"></i></div> -->
+            <div class="preview-close-icon" id="previewCloseIcon" title="关闭"><i class="glyphicon glyphicon-remove"></i></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $('#videoCommentWrap').fadeIn(200, function() {
+            $('#videoCommentImg').drawingboard({
+                src: "data:image/jpeg;base64," + "64位字节流",
+                tools: ['pencil', 'rect', 'ellipse', 'text', 'clean'],
+                activeMode: 'pencil',
+                paintSize: 6,
+                color: '#f60'
+            });
+        });
+    </script>>
+</body>
+</html>
